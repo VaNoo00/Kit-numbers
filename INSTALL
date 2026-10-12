@@ -1,0 +1,78 @@
+# Инструкция по локальному запуску проекта
+
+Эта инструкция предназначена для случая, когда проект уже находится на вашем компьютере (папка `application` уже существует).
+
+## 📋 Требования
+
+- **Python 3.10** или выше
+- **Операционная система:** Windows, Linux или macOS
+- **Дополнительные библиотеки:** не требуются
+
+## ▶️ Запуск программы
+
+### Windows
+
+Откройте командную строку в папке `application` и выполните:
+
+```cmd
+python src\ui\main.py
+```
+
+Или используйте готовый скрипт:
+
+```cmd
+scripts\run.bat
+```
+
+### Linux / macOS
+
+Откройте терминал в папке `application` и выполните:
+
+```bash
+python3 src/ui/main.py
+```
+
+Или используйте готовый скрипт:
+
+```bash
+chmod +x scripts/run.sh
+./scripts/run.sh
+```
+
+## 🧪 Запуск тестов
+
+### Windows
+
+```cmd
+python -m unittest discover -s tests -v
+```
+
+Или через скрипт:
+
+```cmd
+scripts\tests.bat
+```
+
+### Linux / macOS
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+Или через скрипт:
+
+```bash
+chmod +x scripts/tests.sh
+./scripts/tests.sh
+```
+
+## ⚠️ Возможные проблемы
+
+**Ошибка: `python is not recognized`**
+- Python не добавлен в PATH. Переустановите Python с галочкой "Add Python to PATH".
+
+**Ошибка: `ModuleNotFoundError`**
+- Убедитесь, что вы запускаете команды из корневой папки `application`, а не из вложенных папок.
+
+**Ошибка: `Permission denied` (Linux/Mac)**
+- Сделайте скрипты исполняемыми: `chmod +x scripts/*.sh`
